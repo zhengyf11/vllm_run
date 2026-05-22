@@ -1,2 +1,6 @@
 # Relay Agent local artifacts
 .relay/
+
+# Python generated artifacts
+__pycache__/
+*.py[cod]
