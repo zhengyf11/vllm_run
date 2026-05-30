@@ -1,5 +1,10 @@
 # Relay Agent local artifacts
 .relay/
+.skills/
+
+# IDE and virtual environment local artifacts
+.idea/
+.venv/
 
 # Python generated artifacts
 __pycache__/

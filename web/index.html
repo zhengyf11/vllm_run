@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>vLLM DeepSeek-V4-Pro Command Generator</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="page">
+    <header>
+      <p class="eyebrow">vllm_run · Issue #7</p>
+      <h1>vLLM DeepSeek-V4-Pro 命令生成器</h1>
+      <p>本地 Web/API 只生成 Docker/vLLM/检查命令，不执行模型服务；所有 API 响应均为 <code>executed: false</code>。</p>
+    </header>
+
+    <section class="card">
+      <label for="profile">Profile</label>
+      <select id="profile">
+        <option value="prefill">prefill</option>
+        <option value="decode">decode</option>
+        <option value="docker_run">docker_run</option>
+        <option value="host_check">host_check</option>
+        <option value="pd_proxy">pd_proxy</option>
+      </select>
+      <button id="loadDefaults" type="button">加载默认值</button>
+    </section>
+
+    <section class="card grid" id="formFields"></section>
+
+    <section class="actions">
+      <button id="generate" type="button">生成命令</button>
+      <button id="copy" type="button">复制 combined shell</button>
+      <span id="status" role="status"></span>
+    </section>
+
+    <section class="card">
+      <h2>Issue #7 注意事项</h2>
+      <ul id="notes"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Combined Shell</h2>
+      <pre id="output">请选择 profile 并生成命令。</pre>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
